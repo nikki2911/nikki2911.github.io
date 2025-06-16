@@ -1,0 +1,140 @@
+:root {
+      --bg-color: #0f172a;
+      --text-color: #e2e8f0;
+      --accent-color: #23B9BE;
+      --card-bg: #1e293b;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    a, .btn-link {
+      color: var(--accent-color);
+    }
+
+    .navbar, .footer {
+      background-color: #0f172a !important;
+    }
+
+    .text-accent {
+      color: var(--accent-color);
+    }
+
+    .btn-accent {
+      background-color: var(--accent-color);
+      color: #fff;
+    }
+
+    .btn-accent:hover {
+      background-color: #007275;
+    }
+
+    .btn-accent-outline {
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+    }
+    .btn-accent-outline:hover {
+      background-color: var(--accent-color);
+      color: #fff;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      border: none;
+    }
+
+
+    .project-hover-card {
+      height: 300px;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .project-hover-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-hover-card img {
+      height: 400px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-hover-card:hover img {
+      transform: scale(1.05);
+    }
+    .card-text,
+    .card-title,
+    a.view-project-link {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .project-hover-card:hover .card-title {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0ms;
+    }
+
+    .project-hover-card:hover .card-text {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 250ms;
+    }
+
+    .project-hover-card:hover .view-project-link {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 400ms;
+    }
+    .overlay-content {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+      transition: opacity 0.4s ease;
+    }
+
+    .project-hover-card:hover .overlay-content {
+      opacity: 1;
+    }
+    .section-title {
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    footer a {
+      color: #94a3b8;
+    }
+
+    footer a:hover {
+      color: var(--accent-color);
+    }
+
+    .icon-border {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid var(--accent-color); /* or your accent color */
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      color: var(--accent-color);
+    }
+
+    .icon-border:hover {
+      background-color: var(--accent-color); /* Optional: hover effect */
+      color: #fff;
+    }
